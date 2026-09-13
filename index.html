@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="dark scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Monolith Barber Club — Clube de Assinatura de Corte & Estilo VIP</title>
+    <meta name="description" content="Sua imagem impecável 365 dias por ano. Sem filas, sem surpresas. Assinatura mensal de corte e barba para homens e mulheres exigentes." />
+    <!-- Fonts: Luxury Editorial Serif (Playfair Display) + Roman Serif (Cinzel) + Clean Modern Sans (Plus Jakarta Sans) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Playfair+Display:ital,wght@0,600;0,700;0,800;0,900;1,600;1,700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script type="module" crossorigin src="./assets/index-DT4AO_pa.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-DS-ovKoZ.css">
+  </head>
+  <body class="bg-[#07080A] text-slate-100 font-sans selection:bg-[#D4AF37] selection:text-black overflow-x-hidden">
+    <div id="root"></div>
+
+    <!-- WbMonster Floating Button (Posicionado acima da Belyx e do WhatsApp) -->
+    <aside id="wbmonster-floating-widget" aria-label="Conheça a WbMonster" class="wbmonster-container">
+      <div class="wbmonster-tooltip">
+        <span class="wbmonster-pulse-dot"></span>
+        <span>Conheça a WbMonster</span>
+      </div>
+      <a href="https://wbmonster.com.br" target="_blank" rel="noopener noreferrer" aria-label="Acessar WbMonster Ecosystem" class="wbmonster-btn" title="Visitar WbMonster">
+        <span class="wbmonster-ping"></span>
+        <span class="wbmonster-badge"></span>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="wbmonster-icon" fill="none" stroke="currentColor">
+          <circle cx="12" cy="12" r="10" stroke-width="2"></circle>
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2 12h20M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"></path>
+        </svg>
+      </a>
+    </aside>
+
+    <!-- Belyx Floating Button (Posicionado logo acima do botão de WhatsApp) -->
+    <aside id="belyx-floating-widget" aria-label="Conheça a plataforma Belyx" class="belyx-container">
+      <div class="belyx-tooltip">
+        <span class="belyx-pulse-dot"></span>
+        <span>Conheça a Belyx · Sistema VIP</span>
+      </div>
+      <a href="https://www.belyx.com.br" target="_blank" rel="noopener noreferrer" aria-label="Acessar Belyx - Sistema para Barbearias e Salões" class="belyx-btn">
+        <span class="belyx-ping"></span>
+        <span class="belyx-badge"></span>
+        <!-- Logotipo Oficial Belyx Monograma -->
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="belyx-icon" fill="none">
+          <rect width="512" height="512" rx="116" fill="#1F1B2E" />
+          <path d="M168 162 L212 110 L212 392 L168 392 Z" fill="#C79A4B" />
+          <circle cx="286" cy="316" r="76" stroke="#C79A4B" stroke-width="44" />
+        </svg>
+      </a>
+    </aside>
+
+    <style>
+      .wbmonster-container {
+        position: fixed;
+        bottom: 164px;
+        right: 24px;
+        z-index: 50;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        user-select: none;
+        font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+      }
+      .wbmonster-tooltip {
+        display: none;
+        align-items: center;
+        gap: 8px;
+        background: rgba(15, 23, 42, 0.95);
+        color: #f1f5f9;
+        padding: 8px 14px;
+        border-radius: 12px;
+        font-size: 12px;
+        font-weight: 600;
+        box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.5);
+        border: 1px solid rgba(6, 182, 212, 0.4);
+        backdrop-filter: blur(12px);
+        white-space: nowrap;
+        opacity: 0;
+        transform: translateX(10px) scale(0.95);
+        transition: opacity 0.2s ease, transform 0.2s ease;
+        pointer-events: none;
+      }
+      @media (min-width: 640px) {
+        .wbmonster-container:hover .wbmonster-tooltip {
+          display: flex;
+          opacity: 1;
+          transform: translateX(0) scale(1);
+        }
+      }
+      .wbmonster-pulse-dot {
+        width: 8px;
+        height: 8px;
+        border-radius: 9999px;
+        background-color: #06b6d4;
+        animation: wbmonster-pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+      }
+      .wbmonster-btn {
+        position: relative;
+        width: 56px;
+        height: 56px;
+        border-radius: 9999px;
+        background: linear-gradient(135deg, #0891b2 0%, #2563eb 50%, #4f46e5 100%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #ffffff;
+        box-shadow: 0 10px 25px -5px rgba(8, 145, 178, 0.5);
+        border: 1px solid rgba(6, 182, 212, 0.5);
+        cursor: pointer;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+      .wbmonster-btn:hover {
+        transform: scale(1.08);
+        box-shadow: 0 15px 30px -5px rgba(8, 145, 178, 0.7);
+      }
+      .wbmonster-icon {
+        width: 28px;
+        height: 28px;
+        position: relative;
+        z-index: 10;
+        stroke-width: 2;
+        transition: transform 0.3s ease;
+      }
+      .wbmonster-btn:hover .wbmonster-icon {
+        transform: rotate(12deg);
+      }
+      @keyframes wbmonster-pulse {
+        0%, 100% { opacity: 1; }
+        50% { opacity: 0.3; }
+      }
+
+      .belyx-container {
+        position: fixed;
+        bottom: 92px;
+        right: 24px;
+        z-index: 50;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        user-select: none;
+        font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+      }
+      .belyx-tooltip {
+        display: none;
+        align-items: center;
+        gap: 8px;
+        background: rgba(15, 17, 23, 0.95);
+        color: #f1f5f9;
+        padding: 8px 14px;
+        border-radius: 12px;
+        font-size: 12px;
+        font-weight: 600;
+        box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.5);
+        border: 1px solid rgba(212, 175, 55, 0.3);
+        backdrop-filter: blur(12px);
+        white-space: nowrap;
+        opacity: 0;
+        transform: translateX(10px) scale(0.95);
+        transition: opacity 0.2s ease, transform 0.2s ease;
+        pointer-events: none;
+      }
+      @media (min-width: 640px) {
+        .belyx-container:hover .belyx-tooltip {
+          display: flex;
+          opacity: 1;
+          transform: translateX(0) scale(1);
+        }
+      }
+      .belyx-pulse-dot {
+        width: 8px;
+        height: 8px;
+        border-radius: 9999px;
+        background-color: #C79A4B;
+        animation: belyx-pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+      }
+      .belyx-btn {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 56px;
+        height: 56px;
+        border-radius: 9999px;
+        background: linear-gradient(135deg, #1F1B2E 0%, #2D2545 100%);
+        border: 2px solid #C79A4B;
+        color: #C79A4B;
+        box-shadow: 0 10px 25px -5px rgba(199, 154, 75, 0.35), 0 8px 10px -6px rgba(0, 0, 0, 0.5);
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        outline: none;
+        text-decoration: none;
+      }
+      .belyx-btn:hover {
+        transform: scale(1.1);
+        background: linear-gradient(135deg, #2D2545 0%, #3D315E 100%);
+        box-shadow: 0 15px 30px -5px rgba(199, 154, 75, 0.5);
+        border-color: #F3E5AB;
+      }
+      .belyx-btn:active {
+        transform: scale(0.95);
+      }
+      .belyx-ping {
+        position: absolute;
+        inset: -4px;
+        border-radius: 9999px;
+        background-color: rgba(199, 154, 75, 0.25);
+        animation: belyx-ping 2.5s cubic-bezier(0, 0, 0.2, 1) infinite;
+        pointer-events: none;
+      }
+      .belyx-badge {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 14px;
+        height: 14px;
+        background-color: #C79A4B;
+        border: 2px solid #07080A;
+        border-radius: 9999px;
+        box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+      }
+      .belyx-icon {
+        width: 34px;
+        height: 34px;
+        position: relative;
+        z-index: 10;
+        transition: transform 0.3s ease;
+      }
+      .belyx-btn:hover .belyx-icon {
+        transform: rotate(10deg) scale(1.05);
+      }
+      @keyframes belyx-ping {
+        75%, 100% {
+          transform: scale(1.4);
+          opacity: 0;
+        }
+      }
+      @keyframes belyx-pulse {
+        0%, 100% { opacity: 1; }
+        50% { opacity: 0.4; }
+      }
+    </style>
+  </body>
+</html>
+
