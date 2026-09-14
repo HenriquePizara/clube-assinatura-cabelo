@@ -1,3 +1,9 @@
+> **Repositório Oficial Dedicado (ADR-0075):** [HenriquePizara/clube-assinatura-cabelo](https://github.com/HenriquePizara/clube-assinatura-cabelo)  
+> **Status:** 🟢 Repositório Satélite Ativo & Isolado  
+> **Última Sincronização:** 2026-09-13T07:37:03.951Z  
+
+---
+
 # 💈 Monolith Barber Club — Clube de Assinatura de Corte & Estilo VIP
 
 Landing page institucional dark luxury voltada para assinaturas recorrentes de corte de cabelo, barba e barboterapia masculina e feminina executiva.
